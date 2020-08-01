@@ -9,5 +9,6 @@
 import Foundation
 
 protocol VisitRepository {
-  func save(_ visit: VisitModel, onCompletion: (_  result: DBResult) -> ())
+  func save(_ visit: VisitModel, onCompletion: (_: Result<Bool, Error>) -> ())
+  func getVisits(onCompletion: (Result<[VisitModel],Error>) -> ())
 }

@@ -11,15 +11,22 @@ import RealmSwift
 
 class VisitoryDBRepository: VisitorRepository {
   
-  func save(_ visitor: VisitorModel, onCompletion: (DBResult) -> ()) {
+  let realm = try! Realm()
+  
+  func save(_ visitor: VisitorModel, onCompletion: (Result<Bool, Error>) -> ()) {
     do{
-      let realm = try Realm()
       try realm.write{
         realm.add(visitor, update: .modified)
       }
     }catch(let error){
-      onCompletion(.failure(error: error.localizedDescription))
+      onCompletion(.failure(error))
     }
-    onCompletion(.success)
+    onCompletion(.success(true))
   }
+  
+  func getVisitors(onCompletion: (Result<[VisitorModel], Error>) -> ()) {
+    let objects: [VisitorModel] = realm.objects(VisitorModel.self).map { $0 }
+    onCompletion(.success(objects))
+  }
+  
 }

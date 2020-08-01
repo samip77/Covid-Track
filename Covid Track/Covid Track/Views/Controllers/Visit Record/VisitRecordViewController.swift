@@ -119,7 +119,8 @@ class VisitRecordViewController: UIViewController  {
   }
   
   @IBAction func checkInButtonAction(_ sender: UIButton) {
-    viewModel.saveVisit(name: nameTextField.text , email: emailTextField.text, phone: phoneTextField.text, homeAddress: homePostCodeTextField.text, workAddress: workPostCodeTextField.text, checkInDate: datePicker.date)
+    print(temperaturePicker.selectedRow(inComponent: 0))
+    viewModel.saveVisit(name: nameTextField.text , email: emailTextField.text, phone: phoneTextField.text, homeAddress: homePostCodeTextField.text, workAddress: workPostCodeTextField.text, temperatureLevel: temperaturePicker.selectedRow(inComponent: 0), checkInDate: datePicker.date)
   }
   
   private func hideMoreInfo(_ infoHidden: Bool) {
@@ -132,14 +133,19 @@ class VisitRecordViewController: UIViewController  {
     let image = infoHidden ? UIImage(systemName: "chevron.down.circle.fill") : UIImage(systemName: "chevron.up.circle.fill")
     moreInfoButton.setImage(image, for: .normal)
   }
-  
 }
 
+//MARK:- ImagePickerDelegate
 extension VisitRecordViewController: ImagePickerDelegate {
   func didSelect(image: UIImage?) {
+    if let image = image{
+      setCircularProfileButton(with: image)
+    }
+  }
+  
+  private func setCircularProfileButton(with image:UIImage){
     profileButton.imageView?.layer.cornerRadius = profileButton.frame.size.width/2
     profileButton.imageView?.layer.masksToBounds = true
-    
     profileButton.setImage(image, for: .normal)
   }
 }

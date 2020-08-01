@@ -24,14 +24,16 @@ class VisitRecordViewModel {
                  phone: String?,
                  homeAddress: String?,
                  workAddress: String?,
+                 temperatureLevel:Int,
                  checkInDate: Date?){
     
     let visitor = VisitorModel(id: Date().timeIntervalSince1970.description, name: name ?? "NA", email: email ?? "NA", phone: phone ?? "NA", homeAddress: homeAddress, workAddress: workAddress)
     visitorRepository.save(visitor) { (result) in
       print(result)
-      let visitModel = VisitModel(id: Date().timeIntervalSince1970.description, visitor: visitor, checkIn: checkInDate, checkOut: nil)
+      let visitModel = VisitModel(id: Date().timeIntervalSince1970.description, visitor: visitor, temperatureLevel: temperatureLevel, checkIn: checkInDate, checkOut: nil)
       visitRepository.save(visitModel) { (result) in
         print(result)
+        
       }
     }
     

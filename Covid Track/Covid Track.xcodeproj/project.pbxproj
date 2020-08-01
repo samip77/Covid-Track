@@ -36,6 +36,9 @@
 		3449FEAF24D531EE00461F14 /* VisitDBRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449FEAE24D531EE00461F14 /* VisitDBRepository.swift */; };
 		3449FEB724D538C900461F14 /* VisitHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449FEB524D538C900461F14 /* VisitHistoryTableViewCell.swift */; };
 		3449FEB824D538C900461F14 /* VisitHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3449FEB624D538C900461F14 /* VisitHistoryTableViewCell.xib */; };
+		3449FEBA24D53E1300461F14 /* TableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449FEB924D53E1300461F14 /* TableView+Extension.swift */; };
+		3449FEBC24D541A600461F14 /* VisitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449FEBB24D541A600461F14 /* VisitViewModel.swift */; };
+		3449FEC124D56FE800461F14 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449FEC024D56FE800461F14 /* UIViewController+Alert.swift */; };
 		34FB9CF824D450690098D236 /* FontConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB9CF724D450690098D236 /* FontConstants.swift */; };
 		34FB9CFB24D4566B0098D236 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB9CFA24D4566B0098D236 /* ImagePicker.swift */; };
 		34FB9CFD24D462D40098D236 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB9CFC24D462D40098D236 /* Image.swift */; };
@@ -86,6 +89,9 @@
 		3449FEAE24D531EE00461F14 /* VisitDBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitDBRepository.swift; sourceTree = "<group>"; };
 		3449FEB524D538C900461F14 /* VisitHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		3449FEB624D538C900461F14 /* VisitHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VisitHistoryTableViewCell.xib; sourceTree = "<group>"; };
+		3449FEB924D53E1300461F14 /* TableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Extension.swift"; sourceTree = "<group>"; };
+		3449FEBB24D541A600461F14 /* VisitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitViewModel.swift; sourceTree = "<group>"; };
+		3449FEC024D56FE800461F14 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		34FB9CF724D450690098D236 /* FontConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontConstants.swift; sourceTree = "<group>"; };
 		34FB9CFA24D4566B0098D236 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		34FB9CFC24D462D40098D236 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -165,6 +171,7 @@
 		340432C224D04D8900FF9BA7 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				3449FEBF24D56FD200461F14 /* Alert */,
 				34FB9CF924D456510098D236 /* Image Picker */,
 				340432EE24D05D5000FF9BA7 /* App Constants */,
 				340432ED24D05D4500FF9BA7 /* Views */,
@@ -306,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				340432E124D0517600FF9BA7 /* VisitHistoryViewModel.swift */,
+				3449FEBB24D541A600461F14 /* VisitViewModel.swift */,
 			);
 			path = "Visit History";
 			sourceTree = "<group>";
@@ -327,6 +335,7 @@
 				340432F124D05F7C00FF9BA7 /* NibLoadableView.swift */,
 				34FB9CFC24D462D40098D236 /* Image.swift */,
 				3449FEA224D511CC00461F14 /* Button+Extension.swift */,
+				3449FEB924D53E1300461F14 /* TableView+Extension.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -381,6 +390,14 @@
 				3449FEB624D538C900461F14 /* VisitHistoryTableViewCell.xib */,
 			);
 			path = "Visit History";
+			sourceTree = "<group>";
+		};
+		3449FEBF24D56FD200461F14 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				3449FEC024D56FE800461F14 /* UIViewController+Alert.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		34FB9CF924D456510098D236 /* Image Picker */ = {
@@ -588,6 +605,7 @@
 				34FB9CF824D450690098D236 /* FontConstants.swift in Sources */,
 				34FB9CFB24D4566B0098D236 /* ImagePicker.swift in Sources */,
 				340432F224D05F7C00FF9BA7 /* NibLoadableView.swift in Sources */,
+				3449FEBC24D541A600461F14 /* VisitViewModel.swift in Sources */,
 				340432DB24D050CA00FF9BA7 /* VisitorModel.swift in Sources */,
 				3449FEA724D52DDE00461F14 /* VisitorRepository.swift in Sources */,
 				340432F424D060A900FF9BA7 /* AppConstants.swift in Sources */,
@@ -598,6 +616,7 @@
 				3449FEAA24D52E4F00461F14 /* VisitorDatabaseRespository.swift in Sources */,
 				340432EC24D05A0700FF9BA7 /* StoryboardHelper.swift in Sources */,
 				340432E624D056E700FF9BA7 /* StoryboardIdentifiable.swift in Sources */,
+				3449FEBA24D53E1300461F14 /* TableView+Extension.swift in Sources */,
 				340432D424D04FFB00FF9BA7 /* VisitDetailViewController.swift in Sources */,
 				3449FEB724D538C900461F14 /* VisitHistoryTableViewCell.swift in Sources */,
 				340432E224D0517600FF9BA7 /* VisitHistoryViewModel.swift in Sources */,
@@ -606,6 +625,7 @@
 				34FB9CFD24D462D40098D236 /* Image.swift in Sources */,
 				3449FEAF24D531EE00461F14 /* VisitDBRepository.swift in Sources */,
 				3449FEAD24D5318A00461F14 /* VisitRepository.swift in Sources */,
+				3449FEC124D56FE800461F14 /* UIViewController+Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,27 +8,53 @@
 
 import UIKit
 
-extension VisitRecordViewController:UIPickerViewDataSource {
-  private var temperatureLevels: [String]{
-    return ["Less than equal to 37 degree", "More than 37 and less than 37.5 degree", "Greater than equal to 37.5 degree"]
+enum TemperatureLevel:Int, CaseIterable{
+  case normal
+  case high
+  case danger
+  
+  var description: String {
+    switch self {
+    case .normal:
+      return "Less than equal to 37 degree"
+      
+    case .high:
+      return "More than 37 and less than 37.5 degree"
+      
+    case .danger:
+      return  "Greater than equal to 37.5 degree"
+    }
   }
   
-  private var backgroundColors: [UIColor] {
-    return [.black, .orange, .red]
+  var color: UIColor {
+    switch self {
+    case .high:
+      return .orange
+      
+    case .danger:
+      return .red
+      
+    default:
+      return .black
+    }
   }
+}
+
+//MARK:- Temperature Picker
+extension VisitRecordViewController:UIPickerViewDataSource {
   
   func numberOfComponents(in pickerView: UIPickerView) -> Int {
     return 1
   }
   
   func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-    return temperatureLevels.count
+    return TemperatureLevel.allCases.count
   }
   
   func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
     let label = UILabel.init(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: pickerView.frame.width, height: 40)))
     label.font = AppConstants.Font.button
-    label.text = temperatureLevels[row]
+    label.text = TemperatureLevel.allCases[row].description
     return label
   }
   
@@ -43,7 +69,7 @@ extension VisitRecordViewController:UIPickerViewDelegate {
       return
     }
     //label.backgroundColor = backgroundColors[row]
-    label.textColor = backgroundColors[row]
-    print(temperatureLevels[row])
+    label.textColor = TemperatureLevel.allCases[row].color
+    
   }
 }

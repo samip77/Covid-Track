@@ -8,11 +8,7 @@
 
 import Foundation
 
-enum DBResult {
-  case success
-  case failure(error: String)
-}
-
 protocol VisitorRepository {
-  func save(_ visitor: VisitorModel, onCompletion: (_  result: DBResult) -> ())
+  func save(_ visitor: VisitorModel, onCompletion: (_: Result<Bool, Error>) -> ())
+  func getVisitors(onCompletion: (Result<[VisitorModel],Error>) -> ())
 }
