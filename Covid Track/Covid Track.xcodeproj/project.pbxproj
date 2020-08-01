@@ -26,6 +26,12 @@
 		340432F024D05D8900FF9BA7 /* Cell+ResubaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340432EF24D05D8900FF9BA7 /* Cell+ResubaleView.swift */; };
 		340432F224D05F7C00FF9BA7 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340432F124D05F7C00FF9BA7 /* NibLoadableView.swift */; };
 		340432F424D060A900FF9BA7 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340432F324D060A900FF9BA7 /* AppConstants.swift */; };
+		340432F824D1080E00FF9BA7 /* MockVisitorList.json in Resources */ = {isa = PBXBuildFile; fileRef = 340432F724D1080E00FF9BA7 /* MockVisitorList.json */; };
+		3449FEA124D5100100461F14 /* VisitRecordViewController+TemperaturePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449FEA024D5100100461F14 /* VisitRecordViewController+TemperaturePicker.swift */; };
+		3449FEA324D511CC00461F14 /* Button+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449FEA224D511CC00461F14 /* Button+Extension.swift */; };
+		34FB9CF824D450690098D236 /* FontConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB9CF724D450690098D236 /* FontConstants.swift */; };
+		34FB9CFB24D4566B0098D236 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB9CFA24D4566B0098D236 /* ImagePicker.swift */; };
+		34FB9CFD24D462D40098D236 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB9CFC24D462D40098D236 /* Image.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +68,12 @@
 		340432EF24D05D8900FF9BA7 /* Cell+ResubaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cell+ResubaleView.swift"; sourceTree = "<group>"; };
 		340432F124D05F7C00FF9BA7 /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		340432F324D060A900FF9BA7 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		340432F724D1080E00FF9BA7 /* MockVisitorList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockVisitorList.json; sourceTree = "<group>"; };
+		3449FEA024D5100100461F14 /* VisitRecordViewController+TemperaturePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisitRecordViewController+TemperaturePicker.swift"; sourceTree = "<group>"; };
+		3449FEA224D511CC00461F14 /* Button+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Extension.swift"; sourceTree = "<group>"; };
+		34FB9CF724D450690098D236 /* FontConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontConstants.swift; sourceTree = "<group>"; };
+		34FB9CFA24D4566B0098D236 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		34FB9CFC24D462D40098D236 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +115,10 @@
 		3404329F24D04D7300FF9BA7 /* Covid Track */ = {
 			isa = PBXGroup;
 			children = (
+				340432F524D107C000FF9BA7 /* Resources */,
 				340432CB24D04EB200FF9BA7 /* Services */,
 				340432CA24D04EA100FF9BA7 /* Repositories */,
-				340432C624D04DE000FF9BA7 /* View Models */,
+				340432C624D04DE000FF9BA7 /* ViewModels */,
 				340432C524D04DD800FF9BA7 /* Views */,
 				340432C424D04DAD00FF9BA7 /* Models */,
 				340432C324D04D9800FF9BA7 /* App Delegates */,
@@ -128,6 +141,7 @@
 		340432C224D04D8900FF9BA7 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				34FB9CF924D456510098D236 /* Image Picker */,
 				340432EE24D05D5000FF9BA7 /* App Constants */,
 				340432ED24D05D4500FF9BA7 /* Views */,
 			);
@@ -162,14 +176,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		340432C624D04DE000FF9BA7 /* View Models */ = {
+		340432C624D04DE000FF9BA7 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				340432DE24D0511400FF9BA7 /* Visit Detail */,
 				340432DD24D0510100FF9BA7 /* Visit History */,
 				340432DC24D050E800FF9BA7 /* Visit Record */,
 			);
-			path = "View Models";
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		340432C724D04E0800FF9BA7 /* Controllers */ = {
@@ -232,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				340432D524D0502300FF9BA7 /* VisitRecordViewController.swift */,
+				3449FEA024D5100100461F14 /* VisitRecordViewController+TemperaturePicker.swift */,
 			);
 			path = "Visit Record";
 			sourceTree = "<group>";
@@ -283,6 +298,8 @@
 				340432EB24D05A0700FF9BA7 /* StoryboardHelper.swift */,
 				340432EF24D05D8900FF9BA7 /* Cell+ResubaleView.swift */,
 				340432F124D05F7C00FF9BA7 /* NibLoadableView.swift */,
+				34FB9CFC24D462D40098D236 /* Image.swift */,
+				3449FEA224D511CC00461F14 /* Button+Extension.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -291,8 +308,33 @@
 			isa = PBXGroup;
 			children = (
 				340432F324D060A900FF9BA7 /* AppConstants.swift */,
+				34FB9CF724D450690098D236 /* FontConstants.swift */,
 			);
 			path = "App Constants";
+			sourceTree = "<group>";
+		};
+		340432F524D107C000FF9BA7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				340432F624D107C800FF9BA7 /* Mock Data */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		340432F624D107C800FF9BA7 /* Mock Data */ = {
+			isa = PBXGroup;
+			children = (
+				340432F724D1080E00FF9BA7 /* MockVisitorList.json */,
+			);
+			path = "Mock Data";
+			sourceTree = "<group>";
+		};
+		34FB9CF924D456510098D236 /* Image Picker */ = {
+			isa = PBXGroup;
+			children = (
+				34FB9CFA24D4566B0098D236 /* ImagePicker.swift */,
+			);
+			path = "Image Picker";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				340432AD24D04D7500FF9BA7 /* LaunchScreen.storyboard in Resources */,
+				340432F824D1080E00FF9BA7 /* MockVisitorList.json in Resources */,
 				340432AA24D04D7500FF9BA7 /* Assets.xcassets in Resources */,
 				340432A824D04D7300FF9BA7 /* Visit.storyboard in Resources */,
 			);
@@ -397,7 +440,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				340432F024D05D8900FF9BA7 /* Cell+ResubaleView.swift in Sources */,
+				3449FEA324D511CC00461F14 /* Button+Extension.swift in Sources */,
+				3449FEA124D5100100461F14 /* VisitRecordViewController+TemperaturePicker.swift in Sources */,
 				340432D224D04FE700FF9BA7 /* VisitHistoryViewController.swift in Sources */,
+				34FB9CF824D450690098D236 /* FontConstants.swift in Sources */,
+				34FB9CFB24D4566B0098D236 /* ImagePicker.swift in Sources */,
 				340432F224D05F7C00FF9BA7 /* NibLoadableView.swift in Sources */,
 				340432DB24D050CA00FF9BA7 /* VisitorModel.swift in Sources */,
 				340432F424D060A900FF9BA7 /* AppConstants.swift in Sources */,
@@ -411,6 +458,7 @@
 				340432E224D0517600FF9BA7 /* VisitHistoryViewModel.swift in Sources */,
 				340432D624D0502300FF9BA7 /* VisitRecordViewController.swift in Sources */,
 				340432E424D051A100FF9BA7 /* VisitRecordViewModel.swift in Sources */,
+				34FB9CFD24D462D40098D236 /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

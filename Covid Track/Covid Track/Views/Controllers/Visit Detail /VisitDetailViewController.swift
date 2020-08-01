@@ -9,6 +9,11 @@
 import UIKit
 
 class VisitDetailViewController: UIViewController {
+  
+  class func load()-> VisitDetailViewController {
+    let vc: VisitDetailViewController = UIStoryboard(storyboard: .visit).instantiateViewController()
+         return vc
+  }
 
     override func viewDidLoad() {
         super.viewDidLoad()
