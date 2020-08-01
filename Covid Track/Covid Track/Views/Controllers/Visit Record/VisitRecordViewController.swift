@@ -34,6 +34,9 @@ class VisitRecordViewController: UIViewController  {
   private var hideInfo = true;
   private lazy var imagePicker: ImagePicker = ImagePicker(presentationController: self, delegate: self)
   
+  private lazy var viewModel:VisitRecordViewModel = VisitRecordViewModel(with: VisitoryDBRepository(),
+                                                                         and: VisitDBRepository())
+  
   //MARK: - LifeCycle methods
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -116,7 +119,7 @@ class VisitRecordViewController: UIViewController  {
   }
   
   @IBAction func checkInButtonAction(_ sender: UIButton) {
-    
+    viewModel.saveVisit(name: nameTextField.text , email: emailTextField.text, phone: phoneTextField.text, homeAddress: homePostCodeTextField.text, workAddress: workPostCodeTextField.text, checkInDate: datePicker.date)
   }
   
   private func hideMoreInfo(_ infoHidden: Bool) {

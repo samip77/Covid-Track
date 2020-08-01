@@ -18,5 +18,8 @@ extension AppConstants{
     static var body = UIFont.systemFont(ofSize: 16, weight: .regular)
     
     static var button = UIFont.systemFont(ofSize: 18, weight: .medium)
+    
+    static var cellTitle = UIFont.systemFont(ofSize: 18, weight: .bold)
+    static var cellSubtitle =  UIFont.systemFont(ofSize: 14, weight: .light)
   }
 }
