@@ -36,6 +36,7 @@ class VisitRecordViewController: UIViewController  {
   
   private lazy var viewModel:VisitRecordViewModel = VisitRecordViewModel(with: VisitoryDBRepository(),
                                                                          and: VisitDBRepository())
+  private var profileData:Data? = nil
   
   //MARK: - LifeCycle methods
   override func viewDidLoad() {
@@ -108,6 +109,18 @@ class VisitRecordViewController: UIViewController  {
     containerScrollView.keyboardDismissMode = .onDrag
   }
   
+  func resetInformation(){
+    profileData = nil
+    profileButton.setImage(UIImage(systemName: "person.crop.circle.badge.plus"), for: .normal)
+    nameTextField.text = nil
+    emailTextField.text = nil
+    phoneTextField.text = nil
+    homePostCodeTextField.text = nil
+    workPostCodeTextField.text = nil
+    temperaturePicker.selectedRow(inComponent: 0)
+    datePicker.date = Date()
+  }
+  
   //MARK: - Actions
   @IBAction func profileButtonAction(_ sender: UIButton) {
     imagePicker.present(from: sender)
@@ -120,7 +133,23 @@ class VisitRecordViewController: UIViewController  {
   
   @IBAction func checkInButtonAction(_ sender: UIButton) {
     print(temperaturePicker.selectedRow(inComponent: 0))
-    viewModel.saveVisit(name: nameTextField.text , email: emailTextField.text, phone: phoneTextField.text, homeAddress: homePostCodeTextField.text, workAddress: workPostCodeTextField.text, temperatureLevel: temperaturePicker.selectedRow(inComponent: 0), checkInDate: datePicker.date)
+    viewModel.saveVisit(profile: profileData,
+                        name: nameTextField.text,
+                        email: emailTextField.text,
+                        phone: phoneTextField.text,
+                        homeAddress: homePostCodeTextField.text,
+                        workAddress: workPostCodeTextField.text,
+                        temperatureLevel: temperaturePicker.selectedRow(inComponent: 0),
+                        checkInDate: datePicker.date) { [weak self] result in
+                          switch(result){
+                          case .success:
+                            self?.showAlert(with: "Recording Information", and: "Successfull")
+                            self?.resetInformation()
+                            break
+                          case .failure(let error):
+                            self?.showAlert(with: "Recording Information", and: error.localizedDescription)
+                          }
+    }
   }
   
   private func hideMoreInfo(_ infoHidden: Bool) {
@@ -137,8 +166,9 @@ class VisitRecordViewController: UIViewController  {
 
 //MARK:- ImagePickerDelegate
 extension VisitRecordViewController: ImagePickerDelegate {
-  func didSelect(image: UIImage?) {
+  func didSelect(image: UIImage?, imageUrl: URL?) {
     if let image = image{
+      profileData = image.jpegData(compressionQuality: 50.0)
       setCircularProfileButton(with: image)
     }
   }

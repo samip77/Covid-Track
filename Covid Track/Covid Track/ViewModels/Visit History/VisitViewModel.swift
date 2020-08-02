@@ -11,6 +11,13 @@ import UIKit
 class VisitViewModel {
   private let visitModel: VisitModel
   
+  var profile: UIImage? {
+    if let data = visitModel.visitor?.profile{
+      return UIImage(data: data)
+    }
+    return nil
+  }
+  
   var name:String? {
     return visitModel.visitor?.name
   }
@@ -34,7 +41,7 @@ class VisitViewModel {
   }
   
   var temperatureColor: UIColor {
-    let tempLevel = TemperatureLevel(rawValue: visitModel.temperatureLevel ?? 0)
+    let tempLevel = TemperatureLevel(rawValue: visitModel.temperatureLevel )
     return tempLevel?.color ?? .black
   }
   

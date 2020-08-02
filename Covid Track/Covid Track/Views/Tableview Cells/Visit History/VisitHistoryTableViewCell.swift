@@ -27,11 +27,13 @@ class VisitHistoryTableViewCell: UITableViewCell, NibLoadableView {
     checkInLabel.font = AppConstants.Font.cellSubtitle
     checkOutLabel.font = AppConstants.Font.cellSubtitle
     
+    profileImageView.contentMode = .scaleAspectFill
     profileImageView.layer.cornerRadius = 20
     profileImageView.layer.masksToBounds = true
   }
   
   func configure(with viewModel:VisitViewModel){
+    profileImageView.image = viewModel.profile ?? UIImage(systemName: "person.circle")
     nameLabel.text = viewModel.name
     temperatureLabel.text = viewModel.temperatureLevel
     temperatureLabel.textColor = viewModel.temperatureColor
