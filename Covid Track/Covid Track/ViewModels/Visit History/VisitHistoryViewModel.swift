@@ -25,7 +25,6 @@ class VisitHistoryViewModel {
           VisitViewModel($0)
         }
       }
-      
       _onCompletion(newResult)
     }
   }

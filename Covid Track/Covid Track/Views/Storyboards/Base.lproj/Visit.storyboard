@@ -156,7 +156,7 @@
                         <outlet property="dateInformationLabel" destination="h2u-Tz-HLZ" id="hP7-dM-PFd"/>
                         <outlet property="datePicker" destination="3mr-GP-mc0" id="cI5-Js-JbO"/>
                         <outlet property="emailTextField" destination="lxa-eT-du6" id="ejJ-wT-zAr"/>
-                        <outlet property="homePostCodeTextField" destination="NdB-dX-fLO" id="zWU-UC-EST"/>
+                        <outlet property="homeTextField" destination="NdB-dX-fLO" id="zWU-UC-EST"/>
                         <outlet property="moreInfoButton" destination="PUg-ym-Ty6" id="D2m-hr-cnI"/>
                         <outlet property="nameTextField" destination="mte-vL-Dn2" id="8Js-rp-kfp"/>
                         <outlet property="personalInfoLabel" destination="eea-Qj-zlS" id="Rba-VQ-wFO"/>
@@ -164,7 +164,7 @@
                         <outlet property="profileButton" destination="223-v5-tCy" id="IJF-7K-z8A"/>
                         <outlet property="temperatureInfoLabel" destination="VS7-fu-4hT" id="CMc-id-ZXZ"/>
                         <outlet property="temperaturePicker" destination="fBH-dq-JEm" id="jTp-SD-Xq8"/>
-                        <outlet property="workPostCodeTextField" destination="pZ8-eC-5T7" id="SOp-GX-0Bi"/>
+                        <outlet property="workTextField" destination="pZ8-eC-5T7" id="SOp-GX-0Bi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

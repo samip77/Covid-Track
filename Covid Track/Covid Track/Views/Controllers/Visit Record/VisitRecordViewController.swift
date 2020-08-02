@@ -21,8 +21,8 @@ class VisitRecordViewController: UIViewController  {
   @IBOutlet weak var nameTextField: UITextField!
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var phoneTextField: UITextField!
-  @IBOutlet weak var homePostCodeTextField: UITextField!
-  @IBOutlet weak var workPostCodeTextField: UITextField!
+  @IBOutlet weak var homeTextField: UITextField!
+  @IBOutlet weak var workTextField: UITextField!
   
   @IBOutlet weak var datePicker: UIDatePicker!
   @IBOutlet weak var temperaturePicker: UIPickerView!
@@ -81,11 +81,11 @@ class VisitRecordViewController: UIViewController  {
     phoneTextField.keyboardType = .phonePad
     phoneTextField.placeholder = "Phone"
     
-    homePostCodeTextField.keyboardType = .numberPad
-    homePostCodeTextField.placeholder = "Home PostCode"
+    homeTextField.keyboardType = .default
+    homeTextField.placeholder = "Home Address"
     
-    workPostCodeTextField.keyboardType = .numberPad
-    workPostCodeTextField.placeholder = "Work PostCode"
+    workTextField.keyboardType = .default
+    workTextField.placeholder = "Work Address"
   }
   
   func setupButtons() {
@@ -115,8 +115,8 @@ class VisitRecordViewController: UIViewController  {
     nameTextField.text = nil
     emailTextField.text = nil
     phoneTextField.text = nil
-    homePostCodeTextField.text = nil
-    workPostCodeTextField.text = nil
+    homeTextField.text = nil
+    workTextField.text = nil
     temperaturePicker.selectedRow(inComponent: 0)
     datePicker.date = Date()
   }
@@ -137,8 +137,8 @@ class VisitRecordViewController: UIViewController  {
                         name: nameTextField.text,
                         email: emailTextField.text,
                         phone: phoneTextField.text,
-                        homeAddress: homePostCodeTextField.text,
-                        workAddress: workPostCodeTextField.text,
+                        homeAddress: homeTextField.text,
+                        workAddress: workTextField.text,
                         temperatureLevel: temperaturePicker.selectedRow(inComponent: 0),
                         checkInDate: datePicker.date) { [weak self] result in
                           switch(result){
@@ -153,8 +153,8 @@ class VisitRecordViewController: UIViewController  {
   }
   
   private func hideMoreInfo(_ infoHidden: Bool) {
-    self.homePostCodeTextField.isHidden = infoHidden
-    self.workPostCodeTextField.isHidden = infoHidden
+    self.homeTextField.isHidden = infoHidden
+    self.workTextField.isHidden = infoHidden
     self.setupMoreInfoButtonImage(for: infoHidden);
   }
   
