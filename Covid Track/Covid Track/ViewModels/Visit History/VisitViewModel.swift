@@ -18,8 +18,24 @@ class VisitViewModel {
     return nil
   }
   
-  var name:String? {
-    return visitModel.visitor?.name
+  var name: String? {
+    visitModel.visitor?.name
+  }
+  
+  var email: String? {
+    visitModel.visitor?.email
+  }
+  
+  var phone: String? {
+    visitModel.visitor?.phone
+  }
+  
+  var home: String? {
+    visitModel.visitor?.homeAddress
+  }
+  
+  var work: String? {
+    visitModel.visitor?.workAddress
   }
   
   var temperatureLevel: String {
@@ -40,19 +56,31 @@ class VisitViewModel {
     }
   }
   
+  var temperatureDescription: String? {
+    let temperature = TemperatureLevel(rawValue: visitModel.temperatureLevel)
+    return temperature?.description
+  }
+  
   var temperatureColor: UIColor {
     let tempLevel = TemperatureLevel(rawValue: visitModel.temperatureLevel )
     return tempLevel?.color ?? .black
   }
   
-  var arrival: String? {
+  var checkInTime: String? {
     if let date = visitModel.checkIn {
       return readableTimeFrom(date: date)
     }
     return nil
   }
   
-  var departure: String? {
+  var checkInTimeDescription: String? {
+    if let date = visitModel.checkIn{
+      return getTimeDescription(date: date)
+    }
+    return nil
+  }
+  
+  var checkOutTime: String? {
     if let date = visitModel.checkOut {
       return readableTimeFrom(date: date)
     }
@@ -87,6 +115,11 @@ class VisitViewModel {
       description = "\(timeInterval / day) \(unit)"
     }
     return description
-    
+  }
+  
+  func getTimeDescription(date: Date) -> String {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "HH:mm yyyy/MM/dd "
+    return formatter.string(from: date)
   }
 }

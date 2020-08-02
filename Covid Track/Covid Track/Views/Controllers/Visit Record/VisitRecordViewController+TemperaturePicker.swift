@@ -8,7 +8,8 @@
 
 import UIKit
 
-enum TemperatureLevel:Int, CaseIterable{
+//MARK:- TemperatureLevel Enum
+enum TemperatureLevel:Int, CaseIterable {
   case normal
   case high
   case danger
@@ -38,11 +39,11 @@ enum TemperatureLevel:Int, CaseIterable{
       return .black
     }
   }
+  
 }
 
-//MARK:- Temperature Picker
+//MARK:- Temperature PickerDataSource
 extension VisitRecordViewController:UIPickerViewDataSource {
-  
   func numberOfComponents(in pickerView: UIPickerView) -> Int {
     return 1
   }
@@ -63,13 +64,11 @@ extension VisitRecordViewController:UIPickerViewDataSource {
   }
 }
 
+//MARK:- Temperature Delegate
 extension VisitRecordViewController:UIPickerViewDelegate {
   func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-    guard let label = pickerView.view(forRow: row, forComponent: component) as? UILabel else {
-      return
+    if let label = pickerView.view(forRow: row, forComponent: component) as? UILabel {
+       label.textColor = TemperatureLevel.allCases[row].color
     }
-    //label.backgroundColor = backgroundColors[row]
-    label.textColor = TemperatureLevel.allCases[row].color
-    
   }
 }

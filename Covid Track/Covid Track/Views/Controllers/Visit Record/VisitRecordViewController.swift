@@ -38,7 +38,7 @@ class VisitRecordViewController: UIViewController  {
                                                                          and: VisitDBRepository())
   private var profileData:Data? = nil
   
-  //MARK: - LifeCycle methods
+  //MARK: - Lifecycle methods
   override func viewDidLoad() {
     super.viewDidLoad()
     setupViews()
@@ -174,9 +174,9 @@ extension VisitRecordViewController: ImagePickerDelegate {
   }
   
   private func setCircularProfileButton(with image:UIImage){
-    profileButton.imageView?.layer.cornerRadius = profileButton.frame.size.width/2
-    profileButton.imageView?.layer.masksToBounds = true
-    profileButton.setImage(image, for: .normal)
+    if let image = image.circleMasked{
+      profileButton.setImage(image, for: .normal)
+    }
   }
 }
 

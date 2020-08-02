@@ -17,5 +17,4 @@ extension UIButton{
     self.tintColor = tintColor
   }
   
-  
 }

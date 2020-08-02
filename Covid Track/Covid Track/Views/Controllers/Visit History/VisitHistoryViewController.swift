@@ -10,9 +10,11 @@ import UIKit
 
 class VisitHistoryViewController: UIViewController {
   
+  //MARK:- Outlets
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var tableView: UITableView!
   
+  //MARK:- Variables
   private var viewModel:VisitHistoryViewModel = VisitHistoryViewModel(with: VisitDBRepository())
   private var dataSource: [VisitViewModel] = []{
     didSet{
@@ -29,6 +31,7 @@ class VisitHistoryViewController: UIViewController {
     return control
   }()
   
+  //MARK:- LifeCycle Methods
   override func viewDidLoad() {
     super.viewDidLoad()
     setupView()
@@ -39,6 +42,7 @@ class VisitHistoryViewController: UIViewController {
     getVisitorList()
   }
   
+  //MARK:- View Setup
   private func setupView() {
     titleLabel.font = AppConstants.Font.title
     titleLabel.text = "History"
@@ -52,7 +56,7 @@ class VisitHistoryViewController: UIViewController {
     tableView.addSubview(refreshControl)
   }
   
-  
+  //MARK:- Actions
   @objc func getVisitorList(){
     refreshControl.beginRefreshing()
     viewModel.loadVisitors { [weak self] (result) in
@@ -70,7 +74,13 @@ class VisitHistoryViewController: UIViewController {
   }
 }
 
+//MARK:- TableView Delegate and DataSource
 extension VisitHistoryViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let visitModel = dataSource[indexPath.row]
+    let nextVC = VisitDetailViewController.load(with: visitModel)
+    self.present(nextVC, animated: true, completion: nil)
+  }
   
 }
 

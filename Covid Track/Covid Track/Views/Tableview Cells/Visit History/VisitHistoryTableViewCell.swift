@@ -37,8 +37,8 @@ class VisitHistoryTableViewCell: UITableViewCell, NibLoadableView {
     nameLabel.text = viewModel.name
     temperatureLabel.text = viewModel.temperatureLevel
     temperatureLabel.textColor = viewModel.temperatureColor
-    checkInLabel.text = viewModel.arrival
-    checkOutLabel.text = viewModel.departure
+    checkInLabel.text = viewModel.checkInTime
+    checkOutLabel.text = viewModel.checkOutTime
   }
     
 }
