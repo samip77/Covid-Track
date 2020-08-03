@@ -10,22 +10,22 @@ import UIKit
 
 class VisitDetailViewController: UIViewController {
   //MARK:- Outlets
-  @IBOutlet weak var profileImage: UIImageView!
-  @IBOutlet weak var nameTitleLabel: UILabel!
-  @IBOutlet weak var emailTitleLabel: UILabel!
-  @IBOutlet weak var phoneTitleLabel: UILabel!
-  @IBOutlet weak var homeTitleLabel: UILabel!
-  @IBOutlet weak var workTitleLabel: UILabel!
-  @IBOutlet weak var timeTitleLabel: UILabel!
-  @IBOutlet weak var temperatureTitleLabel: UILabel!
+  @IBOutlet weak private var profileImage: UIImageView!
+  @IBOutlet weak private var nameTitleLabel: UILabel!
+  @IBOutlet weak private var emailTitleLabel: UILabel!
+  @IBOutlet weak private var phoneTitleLabel: UILabel!
+  @IBOutlet weak private var homeTitleLabel: UILabel!
+  @IBOutlet weak private var workTitleLabel: UILabel!
+  @IBOutlet weak private var timeTitleLabel: UILabel!
+  @IBOutlet weak private var temperatureTitleLabel: UILabel!
   
-  @IBOutlet weak var nameLabel: UILabel!
-  @IBOutlet weak var emailLabel: UILabel!
-  @IBOutlet weak var phoneLabel: UILabel!
-  @IBOutlet weak var homeLabel: UILabel!
-  @IBOutlet weak var workLabel: UILabel!
-  @IBOutlet weak var timeLabel: UILabel!
-  @IBOutlet weak var temperatureLabel: UILabel!
+  @IBOutlet weak private var nameLabel: UILabel!
+  @IBOutlet weak private var emailLabel: UILabel!
+  @IBOutlet weak private var phoneLabel: UILabel!
+  @IBOutlet weak private var homeLabel: UILabel!
+  @IBOutlet weak private var workLabel: UILabel!
+  @IBOutlet weak private var timeLabel: UILabel!
+  @IBOutlet weak private var temperatureLabel: UILabel!
   
   @IBOutlet var titleLabels: [UILabel]!
   @IBOutlet var subtitleLabels: [UILabel]!

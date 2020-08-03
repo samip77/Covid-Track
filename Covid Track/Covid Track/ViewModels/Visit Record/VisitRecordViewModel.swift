@@ -34,7 +34,7 @@ class VisitRecordViewModel {
                  workAddress: String?,
                  temperatureLevel:Int,
                  checkInDate: Date,
-                 onCompletion: (_: Result<Bool,VisitRecordError>) -> ()) å{
+                 onCompletion: (_: Result<Bool,VisitRecordError>) -> ()) {
     //validate name, email, phone number
     guard let name = name, !name.isEmpty,
       let email = email,

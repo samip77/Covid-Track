@@ -11,8 +11,8 @@ import UIKit
 class VisitHistoryViewController: UIViewController {
   
   //MARK:- Outlets
-  @IBOutlet weak var titleLabel: UILabel!
-  @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak private var titleLabel: UILabel!
+  @IBOutlet weak private var tableView: UITableView!
   
   //MARK:- Variables
   private var viewModel:VisitHistoryViewModel = VisitHistoryViewModel(with: VisitDBRepository())

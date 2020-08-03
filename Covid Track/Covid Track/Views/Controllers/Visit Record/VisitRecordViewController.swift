@@ -10,30 +10,28 @@ import UIKit
 
 class VisitRecordViewController: UIViewController  {
   
-  
   //MARK: - Outlets
-  @IBOutlet weak var personalInfoLabel: UILabel!
-  @IBOutlet weak var temperatureInfoLabel: UILabel!
-  @IBOutlet weak var dateInformationLabel: UILabel!
+  @IBOutlet weak private var personalInfoLabel: UILabel!
+  @IBOutlet weak private var temperatureInfoLabel: UILabel!
+  @IBOutlet weak private var dateInformationLabel: UILabel!
   
-  @IBOutlet weak var containerScrollView: UIScrollView!
+  @IBOutlet weak private var containerScrollView: UIScrollView!
   
-  @IBOutlet weak var nameTextField: UITextField!
-  @IBOutlet weak var emailTextField: UITextField!
-  @IBOutlet weak var phoneTextField: UITextField!
-  @IBOutlet weak var homeTextField: UITextField!
-  @IBOutlet weak var workTextField: UITextField!
+  @IBOutlet weak private var nameTextField: UITextField!
+  @IBOutlet weak private var emailTextField: UITextField!
+  @IBOutlet weak private var phoneTextField: UITextField!
+  @IBOutlet weak private var homeTextField: UITextField!
+  @IBOutlet weak private var workTextField: UITextField!
   
-  @IBOutlet weak var datePicker: UIDatePicker!
-  @IBOutlet weak var temperaturePicker: UIPickerView!
-  @IBOutlet weak var profileButton: UIButton!
-  @IBOutlet weak var moreInfoButton: UIButton!
-  @IBOutlet weak var checkInButton: UIButton!
+  @IBOutlet weak private var datePicker: UIDatePicker!
+  @IBOutlet weak private var temperaturePicker: UIPickerView!
+  @IBOutlet weak private var profileButton: UIButton!
+  @IBOutlet weak private var moreInfoButton: UIButton!
+  @IBOutlet weak private var checkInButton: UIButton!
   
   //MARK: - Variables
   private var hideInfo = true;
   private lazy var imagePicker: ImagePicker = ImagePicker(presentationController: self, delegate: self)
-  
   private lazy var viewModel:VisitRecordViewModel = VisitRecordViewModel(with: VisitoryDBRepository(),
                                                                          and: VisitDBRepository())
   private var profileData:Data? = nil
@@ -57,7 +55,6 @@ class VisitRecordViewController: UIViewController  {
     setupkeyboard()
     setupPickerViews()
     hideMoreInfo(hideInfo);
-    
   }
   
   func setupInfoLabels() {
