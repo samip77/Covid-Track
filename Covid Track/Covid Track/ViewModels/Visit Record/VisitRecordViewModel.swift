@@ -8,8 +8,8 @@
 
 import Foundation
 
-class VisitRecordError:Error {
-  var localizedDescription: String
+class VisitRecordError: Error {
+  private (set) var localizedDescription: String
   
   init(message: String) {
     localizedDescription = message
@@ -26,15 +26,15 @@ class VisitRecordViewModel {
     self.visitRepository = visitRepository
   }
   
-  func saveVisit( profile: Data?,
-                  name: String?,
-                  email: String?,
-                  phone: String?,
-                  homeAddress: String?,
-                  workAddress: String?,
-                  temperatureLevel:Int,
-                  checkInDate: Date,
-                  onCompletion: (_: Result<Bool,VisitRecordError>) -> ()){
+  func saveVisit(profile: Data?,
+                 name: String?,
+                 email: String?,
+                 phone: String?,
+                 homeAddress: String?,
+                 workAddress: String?,
+                 temperatureLevel:Int,
+                 checkInDate: Date,
+                 onCompletion: (_: Result<Bool,VisitRecordError>) -> ()) å{
     //validate name, email, phone number
     guard let name = name, !name.isEmpty,
       let email = email,
