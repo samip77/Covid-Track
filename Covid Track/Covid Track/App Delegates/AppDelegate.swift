@@ -38,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
   private func setUpRealmDatabase() {
+    //try! FileManager.default.removeItem(at: Realm.Configuration.defaultConfiguration.fileURL!)
     var config = Realm.Configuration(
       // Set the new schema version. This must be greater than the previously used
       // version (if you've never set a schema version before, the version is 0).
