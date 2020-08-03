@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 protocol ReusableView {
-  static var defaultReuseIdentifier: String { get }
+  static var reuseIdentifier: String { get }
 }
 
 extension ReusableView where Self: UIView {
-  static var defaultReuseIdentifier: String {
+  static var reuseIdentifier: String {
     return NSStringFromClass(self)
   }
 }
