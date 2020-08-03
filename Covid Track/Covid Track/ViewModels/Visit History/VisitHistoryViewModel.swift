@@ -12,7 +12,7 @@ class VisitHistoryViewModel {
   
   private let visitRepository:VisitRepository
   
-  var visits:[VisitViewModel] = []
+  private var visits:[VisitViewModel] = []
   
   init(with visitRepository:VisitRepository) {
     self.visitRepository = visitRepository
