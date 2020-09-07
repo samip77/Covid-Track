@@ -8,11 +8,15 @@
 
 import Foundation
 
-class VisitRecordError: Error {
+class VisitRecordError: Error, Equatable {
   private (set) var localizedDescription: String
   
   init(message: String) {
     localizedDescription = message
+  }
+  
+  static func == (lhs: VisitRecordError, rhs: VisitRecordError) -> Bool {
+    lhs.localizedDescription == rhs.localizedDescription
   }
 }
 
@@ -21,7 +25,7 @@ class VisitRecordViewModel {
   private let visitRepository: VisitRepository
   
   init(with visitorRepository: VisitorRepository = VisitoryDBRepository(),
-       and visitRepository:VisitRepository) {
+       and visitRepository: VisitRepository = VisitDBRepository()) {
     self.visitorRepository = visitorRepository
     self.visitRepository = visitRepository
   }
@@ -36,19 +40,17 @@ class VisitRecordViewModel {
                  checkInDate: Date,
                  onCompletion: (_: Result<Bool,VisitRecordError>) -> ()) {
     //validate name, email, phone number
-    guard let name = name, !name.isEmpty,
-      let email = email,
-      let phone = phone else{
+    guard let name = name, !name.isEmpty else{
         onCompletion(.failure(VisitRecordError(message: "Enter you name.")))
         return
     }
     
-    guard email.isValidEmail else {
+    guard let email = email, email.isValidEmail else {
       onCompletion(.failure(VisitRecordError(message: "Enter valid email.")))
       return
     }
     
-    guard phone.isValidPhone else {
+    guard let phone = phone, phone.isValidPhone else {
       onCompletion(.failure(VisitRecordError(message: "Enter valid 10 digit phone number.")))
       return
     }

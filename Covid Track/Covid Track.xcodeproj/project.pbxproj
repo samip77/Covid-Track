@@ -13,7 +13,6 @@
 		340432A824D04D7300FF9BA7 /* Visit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 340432A624D04D7300FF9BA7 /* Visit.storyboard */; };
 		340432AA24D04D7500FF9BA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 340432A924D04D7500FF9BA7 /* Assets.xcassets */; };
 		340432AD24D04D7500FF9BA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 340432AB24D04D7500FF9BA7 /* LaunchScreen.storyboard */; };
-		340432B824D04D7500FF9BA7 /* Covid_TrackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340432B724D04D7500FF9BA7 /* Covid_TrackTests.swift */; };
 		340432D224D04FE700FF9BA7 /* VisitHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340432D124D04FE700FF9BA7 /* VisitHistoryViewController.swift */; };
 		340432D424D04FFB00FF9BA7 /* VisitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340432D324D04FFB00FF9BA7 /* VisitDetailViewController.swift */; };
 		340432D624D0502300FF9BA7 /* VisitRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340432D524D0502300FF9BA7 /* VisitRecordViewController.swift */; };
@@ -27,7 +26,7 @@
 		340432F024D05D8900FF9BA7 /* Cell+ResubaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340432EF24D05D8900FF9BA7 /* Cell+ResubaleView.swift */; };
 		340432F224D05F7C00FF9BA7 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340432F124D05F7C00FF9BA7 /* NibLoadableView.swift */; };
 		340432F424D060A900FF9BA7 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340432F324D060A900FF9BA7 /* AppConstants.swift */; };
-		340432F824D1080E00FF9BA7 /* MockVisitorList.json in Resources */ = {isa = PBXBuildFile; fileRef = 340432F724D1080E00FF9BA7 /* MockVisitorList.json */; };
+		341EA34024D9889600D83AF2 /* VisitRecordSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341EA33F24D9889600D83AF2 /* VisitRecordSpec.swift */; };
 		3449FEA124D5100100461F14 /* VisitRecordViewController+TemperaturePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449FEA024D5100100461F14 /* VisitRecordViewController+TemperaturePicker.swift */; };
 		3449FEA324D511CC00461F14 /* Button+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449FEA224D511CC00461F14 /* Button+Extension.swift */; };
 		3449FEA724D52DDE00461F14 /* VisitorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449FEA624D52DDE00461F14 /* VisitorRepository.swift */; };
@@ -39,6 +38,8 @@
 		3449FEBA24D53E1300461F14 /* TableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449FEB924D53E1300461F14 /* TableView+Extension.swift */; };
 		3449FEBC24D541A600461F14 /* VisitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449FEBB24D541A600461F14 /* VisitViewModel.swift */; };
 		3449FEC124D56FE800461F14 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449FEC024D56FE800461F14 /* UIViewController+Alert.swift */; };
+		349BC11325063F7700568CE0 /* MockVistRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BC11225063F7700568CE0 /* MockVistRepository.swift */; };
+		349BC115250640A900568CE0 /* MockVisitorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349BC114250640A900568CE0 /* MockVisitorRepository.swift */; };
 		34B358CB24D64D000085BE0F /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B358CA24D64D000085BE0F /* String+Extension.swift */; };
 		34B358CD24D68DDF0085BE0F /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B358CC24D68DDF0085BE0F /* View+Extension.swift */; };
 		34FB9CF824D450690098D236 /* FontConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB9CF724D450690098D236 /* FontConstants.swift */; };
@@ -67,7 +68,6 @@
 		340432AC24D04D7500FF9BA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		340432AE24D04D7500FF9BA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		340432B324D04D7500FF9BA7 /* Covid TrackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Covid TrackTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		340432B724D04D7500FF9BA7 /* Covid_TrackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid_TrackTests.swift; sourceTree = "<group>"; };
 		340432B924D04D7500FF9BA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		340432D124D04FE700FF9BA7 /* VisitHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitHistoryViewController.swift; sourceTree = "<group>"; };
 		340432D324D04FFB00FF9BA7 /* VisitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitDetailViewController.swift; sourceTree = "<group>"; };
@@ -82,7 +82,14 @@
 		340432EF24D05D8900FF9BA7 /* Cell+ResubaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cell+ResubaleView.swift"; sourceTree = "<group>"; };
 		340432F124D05F7C00FF9BA7 /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		340432F324D060A900FF9BA7 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
-		340432F724D1080E00FF9BA7 /* MockVisitorList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockVisitorList.json; sourceTree = "<group>"; };
+		341EA33624D987EC00D83AF2 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		341EA33824D987F400D83AF2 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		341EA33A24D9881300D83AF2 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		341EA33C24D9881F00D83AF2 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		341EA33F24D9889600D83AF2 /* VisitRecordSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitRecordSpec.swift; sourceTree = "<group>"; };
+		341EA34124D98E2200D83AF2 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		341EA34324D98E2200D83AF2 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		341EA34724D9922300D83AF2 /* Covid TrackTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Covid TrackTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		3449FEA024D5100100461F14 /* VisitRecordViewController+TemperaturePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisitRecordViewController+TemperaturePicker.swift"; sourceTree = "<group>"; };
 		3449FEA224D511CC00461F14 /* Button+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Extension.swift"; sourceTree = "<group>"; };
 		3449FEA624D52DDE00461F14 /* VisitorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorRepository.swift; sourceTree = "<group>"; };
@@ -94,6 +101,8 @@
 		3449FEB924D53E1300461F14 /* TableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Extension.swift"; sourceTree = "<group>"; };
 		3449FEBB24D541A600461F14 /* VisitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitViewModel.swift; sourceTree = "<group>"; };
 		3449FEC024D56FE800461F14 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		349BC11225063F7700568CE0 /* MockVistRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVistRepository.swift; sourceTree = "<group>"; };
+		349BC114250640A900568CE0 /* MockVisitorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVisitorRepository.swift; sourceTree = "<group>"; };
 		34B358CA24D64D000085BE0F /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		34B358CC24D68DDF0085BE0F /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		34FB9CF724D450690098D236 /* FontConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontConstants.swift; sourceTree = "<group>"; };
@@ -166,8 +175,10 @@
 		340432B624D04D7500FF9BA7 /* Covid TrackTests */ = {
 			isa = PBXGroup;
 			children = (
-				340432B724D04D7500FF9BA7 /* Covid_TrackTests.swift */,
+				349BC11125063F5400568CE0 /* MokeRepository */,
 				340432B924D04D7500FF9BA7 /* Info.plist */,
+				341EA34724D9922300D83AF2 /* Covid TrackTests-Bridging-Header.h */,
+				341EA33F24D9889600D83AF2 /* VisitRecordSpec.swift */,
 			);
 			path = "Covid TrackTests";
 			sourceTree = "<group>";
@@ -356,17 +367,8 @@
 		340432F524D107C000FF9BA7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				340432F624D107C800FF9BA7 /* Mock Data */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		340432F624D107C800FF9BA7 /* Mock Data */ = {
-			isa = PBXGroup;
-			children = (
-				340432F724D1080E00FF9BA7 /* MockVisitorList.json */,
-			);
-			path = "Mock Data";
 			sourceTree = "<group>";
 		};
 		3449FEA824D52E3300461F14 /* VisitorRepository */ = {
@@ -404,6 +406,15 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
+		349BC11125063F5400568CE0 /* MokeRepository */ = {
+			isa = PBXGroup;
+			children = (
+				349BC11225063F7700568CE0 /* MockVistRepository.swift */,
+				349BC114250640A900568CE0 /* MockVisitorRepository.swift */,
+			);
+			path = MokeRepository;
+			sourceTree = "<group>";
+		};
 		34B358C824D64C7C0085BE0F /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,6 +444,12 @@
 		730EAB3287EFE1D44601DAC1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				341EA34124D98E2200D83AF2 /* Nimble.framework */,
+				341EA34324D98E2200D83AF2 /* Quick.framework */,
+				341EA33C24D9881F00D83AF2 /* Quick.framework */,
+				341EA33A24D9881300D83AF2 /* Nimble.framework */,
+				341EA33824D987F400D83AF2 /* Nimble.framework */,
+				341EA33624D987EC00D83AF2 /* Quick.framework */,
 				E099858B368CFFE14D055F5F /* Pods_Covid_Track.framework */,
 				695D3997F363E1CD779B320F /* Pods_Covid_TrackTests.framework */,
 			);
@@ -480,6 +497,7 @@
 				340432AF24D04D7500FF9BA7 /* Sources */,
 				340432B024D04D7500FF9BA7 /* Frameworks */,
 				340432B124D04D7500FF9BA7 /* Resources */,
+				ABBEC4B5806AEBFC596C29AC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -506,6 +524,7 @@
 					};
 					340432B224D04D7500FF9BA7 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 						TestTargetID = 3404329C24D04D7300FF9BA7;
 					};
 				};
@@ -535,7 +554,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				340432AD24D04D7500FF9BA7 /* LaunchScreen.storyboard in Resources */,
-				340432F824D1080E00FF9BA7 /* MockVisitorList.json in Resources */,
 				340432AA24D04D7500FF9BA7 /* Assets.xcassets in Resources */,
 				3449FEB824D538C900461F14 /* VisitHistoryTableViewCell.xib in Resources */,
 				340432A824D04D7300FF9BA7 /* Visit.storyboard in Resources */,
@@ -567,6 +585,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Covid Track/Pods-Covid Track-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABBEC4B5806AEBFC596C29AC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Covid TrackTests/Pods-Covid TrackTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Covid TrackTests/Pods-Covid TrackTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Covid TrackTests/Pods-Covid TrackTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C518B66E49B268DE9F1D422E /* [CP] Check Pods Manifest.lock */ = {
@@ -657,7 +692,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				340432B824D04D7500FF9BA7 /* Covid_TrackTests.swift in Sources */,
+				341EA34024D9889600D83AF2 /* VisitRecordSpec.swift in Sources */,
+				349BC115250640A900568CE0 /* MockVisitorRepository.swift in Sources */,
+				349BC11325063F7700568CE0 /* MockVistRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -811,6 +848,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5H95LP8XAJ;
 				INFOPLIST_FILE = "Covid Track/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -830,6 +868,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5H95LP8XAJ;
 				INFOPLIST_FILE = "Covid Track/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -849,6 +888,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5H95LP8XAJ;
 				INFOPLIST_FILE = "Covid TrackTests/Info.plist";
@@ -860,6 +900,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.samip.Covid-TrackTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Covid TrackTests/Covid TrackTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Covid Track.app/Covid Track";
@@ -872,6 +914,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5H95LP8XAJ;
 				INFOPLIST_FILE = "Covid TrackTests/Info.plist";
@@ -883,6 +926,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.samip.Covid-TrackTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Covid TrackTests/Covid TrackTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Covid Track.app/Covid Track";

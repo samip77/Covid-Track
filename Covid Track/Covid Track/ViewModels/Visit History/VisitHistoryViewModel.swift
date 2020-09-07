@@ -10,11 +10,11 @@ import Foundation
 
 class VisitHistoryViewModel {
   
-  private let visitRepository:VisitRepository
+  private let visitRepository: VisitRepository
   
-  private var visits:[VisitViewModel] = []
+  private var visits: [VisitViewModel] = []
   
-  init(with visitRepository:VisitRepository) {
+  init(with visitRepository: VisitRepository) {
     self.visitRepository = visitRepository
   }
   
