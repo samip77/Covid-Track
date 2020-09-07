@@ -71,7 +71,12 @@ class VisitRecordViewModel {
                                     checkIn: checkInDate,
                                     checkOut: nil)
         visitRepository.save(visitModel) { (finalResult) in
-          onCompletion(.success(true))
+          switch finalResult{
+          case .success(let success):
+            onCompletion(.success(success))
+          case .failure(let error):
+            onCompletion(.failure(VisitRecordError(message: error.localizedDescription)))
+          }
         }
         break
       case .failure(let error):

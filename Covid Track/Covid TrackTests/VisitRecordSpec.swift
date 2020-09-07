@@ -105,5 +105,27 @@ class VisitRecordSpec: QuickSpec {
         }
       }
     }
+    
+    describe("VistRecord ViewModel with VisitRecord Database Error") {
+      context("On CheckIn") {
+        let visitorRepository = MockVisitorRepository()
+        let visitRepository = MockVisitRepository(with: false)
+        let viewModel = VisitRecordViewModel(with: visitorRepository, and: visitRepository);
+        
+        it("should show Database Error") {
+          viewModel.saveVisit(profile: nil, name: "Samip", email: "samip@gmail.com", phone: "0450487254", homeAddress: nil, workAddress: nil, temperatureLevel: 0, checkInDate: Date()) { result in
+            switch result {
+            case .success(let success):
+              expect(success).to(equal(false), description: "should have Error")
+              
+            case .failure(let error):
+              expect(error).notTo(beNil(), description: "should have Error")
+            }
+          }
+          
+        }
+      }
+    }
+    
   }
 }

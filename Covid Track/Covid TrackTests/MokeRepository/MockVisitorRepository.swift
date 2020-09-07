@@ -22,7 +22,6 @@ class MockVisitorRepository: VisitorRepository {
     } else {
       onCompletion(.failure(VisitRecordError(message: "Visitor Database Error")))
     }
-   
   }
   
   func getVisitors(onCompletion: (Result<[VisitorModel], Error>) -> ()) {

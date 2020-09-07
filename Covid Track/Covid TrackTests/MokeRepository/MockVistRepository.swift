@@ -10,8 +10,18 @@ import Foundation
 @testable import Covid_Track
 
 class MockVisitRepository: VisitRepository {
+  private var databaseSuccess: Bool
+  
+  init(with success: Bool = true) {
+    self.databaseSuccess = success
+  }
+  
   func save(_ visit: VisitModel, onCompletion: (Result<Bool, Error>) -> ()) {
-    
+    if(databaseSuccess) {
+       onCompletion(.success(true))
+    } else {
+      onCompletion(.failure(VisitRecordError(message: "Visit Database Error")))
+    }
   }
   
   func getVisits(onCompletion: (Result<[VisitModel], Error>) -> ()) {
