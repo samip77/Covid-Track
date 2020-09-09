@@ -122,7 +122,6 @@ class VisitRecordSpec: QuickSpec {
               expect(error).notTo(beNil(), description: "should have Error")
             }
           }
-          
         }
       }
     }

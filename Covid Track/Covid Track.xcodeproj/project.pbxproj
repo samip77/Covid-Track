@@ -18,7 +18,6 @@
 		340432D624D0502300FF9BA7 /* VisitRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340432D524D0502300FF9BA7 /* VisitRecordViewController.swift */; };
 		340432D824D0508300FF9BA7 /* VisitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340432D724D0508300FF9BA7 /* VisitModel.swift */; };
 		340432DB24D050CA00FF9BA7 /* VisitorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340432DA24D050CA00FF9BA7 /* VisitorModel.swift */; };
-		340432E024D0514000FF9BA7 /* VisitDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340432DF24D0514000FF9BA7 /* VisitDetailViewModel.swift */; };
 		340432E224D0517600FF9BA7 /* VisitHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340432E124D0517600FF9BA7 /* VisitHistoryViewModel.swift */; };
 		340432E424D051A100FF9BA7 /* VisitRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340432E324D051A100FF9BA7 /* VisitRecordViewModel.swift */; };
 		340432E624D056E700FF9BA7 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340432E524D056E700FF9BA7 /* StoryboardIdentifiable.swift */; };
@@ -27,6 +26,8 @@
 		340432F224D05F7C00FF9BA7 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340432F124D05F7C00FF9BA7 /* NibLoadableView.swift */; };
 		340432F424D060A900FF9BA7 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340432F324D060A900FF9BA7 /* AppConstants.swift */; };
 		341EA34024D9889600D83AF2 /* VisitRecordSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341EA33F24D9889600D83AF2 /* VisitRecordSpec.swift */; };
+		343335832508D9EB0025330E /* VisitHistorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343335822508D9EB0025330E /* VisitHistorySpec.swift */; };
+		343335852508E76C0025330E /* VisitDetailSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343335842508E76C0025330E /* VisitDetailSpec.swift */; };
 		3449FEA124D5100100461F14 /* VisitRecordViewController+TemperaturePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449FEA024D5100100461F14 /* VisitRecordViewController+TemperaturePicker.swift */; };
 		3449FEA324D511CC00461F14 /* Button+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449FEA224D511CC00461F14 /* Button+Extension.swift */; };
 		3449FEA724D52DDE00461F14 /* VisitorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449FEA624D52DDE00461F14 /* VisitorRepository.swift */; };
@@ -74,7 +75,6 @@
 		340432D524D0502300FF9BA7 /* VisitRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitRecordViewController.swift; sourceTree = "<group>"; };
 		340432D724D0508300FF9BA7 /* VisitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitModel.swift; sourceTree = "<group>"; };
 		340432DA24D050CA00FF9BA7 /* VisitorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorModel.swift; sourceTree = "<group>"; };
-		340432DF24D0514000FF9BA7 /* VisitDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitDetailViewModel.swift; sourceTree = "<group>"; };
 		340432E124D0517600FF9BA7 /* VisitHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitHistoryViewModel.swift; sourceTree = "<group>"; };
 		340432E324D051A100FF9BA7 /* VisitRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitRecordViewModel.swift; sourceTree = "<group>"; };
 		340432E524D056E700FF9BA7 /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
@@ -90,6 +90,8 @@
 		341EA34124D98E2200D83AF2 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		341EA34324D98E2200D83AF2 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		341EA34724D9922300D83AF2 /* Covid TrackTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Covid TrackTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		343335822508D9EB0025330E /* VisitHistorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitHistorySpec.swift; sourceTree = "<group>"; };
+		343335842508E76C0025330E /* VisitDetailSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitDetailSpec.swift; sourceTree = "<group>"; };
 		3449FEA024D5100100461F14 /* VisitRecordViewController+TemperaturePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VisitRecordViewController+TemperaturePicker.swift"; sourceTree = "<group>"; };
 		3449FEA224D511CC00461F14 /* Button+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Extension.swift"; sourceTree = "<group>"; };
 		3449FEA624D52DDE00461F14 /* VisitorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorRepository.swift; sourceTree = "<group>"; };
@@ -158,6 +160,8 @@
 		3404329F24D04D7300FF9BA7 /* Covid Track */ = {
 			isa = PBXGroup;
 			children = (
+				340432A924D04D7500FF9BA7 /* Assets.xcassets */,
+				340432AE24D04D7500FF9BA7 /* Info.plist */,
 				340432F524D107C000FF9BA7 /* Resources */,
 				340432CB24D04EB200FF9BA7 /* Services */,
 				340432CA24D04EA100FF9BA7 /* Repositories */,
@@ -166,8 +170,6 @@
 				340432C424D04DAD00FF9BA7 /* Models */,
 				340432C324D04D9800FF9BA7 /* App Delegates */,
 				340432C224D04D8900FF9BA7 /* Utilities */,
-				340432A924D04D7500FF9BA7 /* Assets.xcassets */,
-				340432AE24D04D7500FF9BA7 /* Info.plist */,
 			);
 			path = "Covid Track";
 			sourceTree = "<group>";
@@ -179,6 +181,8 @@
 				340432B924D04D7500FF9BA7 /* Info.plist */,
 				341EA34724D9922300D83AF2 /* Covid TrackTests-Bridging-Header.h */,
 				341EA33F24D9889600D83AF2 /* VisitRecordSpec.swift */,
+				343335822508D9EB0025330E /* VisitHistorySpec.swift */,
+				343335842508E76C0025330E /* VisitDetailSpec.swift */,
 			);
 			path = "Covid TrackTests";
 			sourceTree = "<group>";
@@ -327,7 +331,6 @@
 			isa = PBXGroup;
 			children = (
 				340432E124D0517600FF9BA7 /* VisitHistoryViewModel.swift */,
-				3449FEBB24D541A600461F14 /* VisitViewModel.swift */,
 			);
 			path = "Visit History";
 			sourceTree = "<group>";
@@ -335,7 +338,7 @@
 		340432DE24D0511400FF9BA7 /* Visit Detail */ = {
 			isa = PBXGroup;
 			children = (
-				340432DF24D0514000FF9BA7 /* VisitDetailViewModel.swift */,
+				3449FEBB24D541A600461F14 /* VisitViewModel.swift */,
 			);
 			path = "Visit Detail";
 			sourceTree = "<group>";
@@ -668,7 +671,6 @@
 				3449FEA724D52DDE00461F14 /* VisitorRepository.swift in Sources */,
 				340432F424D060A900FF9BA7 /* AppConstants.swift in Sources */,
 				340432D824D0508300FF9BA7 /* VisitModel.swift in Sources */,
-				340432E024D0514000FF9BA7 /* VisitDetailViewModel.swift in Sources */,
 				340432A124D04D7300FF9BA7 /* AppDelegate.swift in Sources */,
 				340432A324D04D7300FF9BA7 /* SceneDelegate.swift in Sources */,
 				3449FEAA24D52E4F00461F14 /* VisitorDatabaseRespository.swift in Sources */,
@@ -693,8 +695,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				341EA34024D9889600D83AF2 /* VisitRecordSpec.swift in Sources */,
+				343335832508D9EB0025330E /* VisitHistorySpec.swift in Sources */,
 				349BC115250640A900568CE0 /* MockVisitorRepository.swift in Sources */,
 				349BC11325063F7700568CE0 /* MockVistRepository.swift in Sources */,
+				343335852508E76C0025330E /* VisitDetailSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

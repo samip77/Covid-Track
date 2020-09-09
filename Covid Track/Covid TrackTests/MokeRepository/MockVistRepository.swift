@@ -25,7 +25,11 @@ class MockVisitRepository: VisitRepository {
   }
   
   func getVisits(onCompletion: (Result<[VisitModel], Error>) -> ()) {
-    
+    if(databaseSuccess) {
+       onCompletion(.success([]))
+    } else {
+      onCompletion(.failure(VisitRecordError(message: "Visit Database Error")))
+    }
   }
   
   
