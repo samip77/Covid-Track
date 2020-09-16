@@ -8,18 +8,14 @@
 
 import UIKit
 
-struct AppConstants {
-  
-}
+
+struct AppConstants { }
 
 extension AppConstants {
-  
   //MARK:- App Colors
   struct Color {
     static var background: UIColor{
-      return #colorLiteral(red: 0.9605260491, green: 0.9644870162, blue: 0.9809592366, alpha: 1)
+      return #colorLiteral(red: 0.5568627451, green: 0.3960784314, blue: 0.6274509804, alpha: 1)
     }
-    
   }
-  
 }

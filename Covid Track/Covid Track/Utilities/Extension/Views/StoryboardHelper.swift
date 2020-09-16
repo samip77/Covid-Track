@@ -6,12 +6,10 @@
 //  Copyright © 2020 Samip shah. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 
 extension UIStoryboard {
-  
   enum Storyboard: String {
     //TODO: Add new storyboards name if applicable.
     case visit = "Visit"
@@ -30,7 +28,7 @@ extension UIStoryboard {
     guard let viewController = instantiateViewController(withIdentifier: T.storyboardIdentifier) as? T else {
       fatalError("\n\nCould not find view controller with name \(T.storyboardIdentifier)\n\n")
     }
-    
+  
     return viewController
   }
 }

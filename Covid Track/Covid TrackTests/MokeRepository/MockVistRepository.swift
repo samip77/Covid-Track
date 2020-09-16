@@ -13,24 +13,22 @@ class MockVisitRepository: VisitRepository {
   private var databaseSuccess: Bool
   
   init(with success: Bool = true) {
-    self.databaseSuccess = success
+    databaseSuccess = success
   }
   
   func save(_ visit: VisitModel, onCompletion: (Result<Bool, Error>) -> ()) {
-    if(databaseSuccess) {
-       onCompletion(.success(true))
+    if databaseSuccess {
+      onCompletion(.success(true))
     } else {
       onCompletion(.failure(VisitRecordError(message: "Visit Database Error")))
     }
   }
   
   func getVisits(onCompletion: (Result<[VisitModel], Error>) -> ()) {
-    if(databaseSuccess) {
-       onCompletion(.success([]))
+    if databaseSuccess {
+      onCompletion(.success([]))
     } else {
       onCompletion(.failure(VisitRecordError(message: "Visit Database Error")))
     }
   }
-  
-  
 }

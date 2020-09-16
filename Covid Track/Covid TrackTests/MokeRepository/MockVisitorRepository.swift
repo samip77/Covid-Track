@@ -13,7 +13,7 @@ class MockVisitorRepository: VisitorRepository {
   private var databaseSuccess: Bool
   
   init(with saveSuccess: Bool = true) {
-    self.databaseSuccess = saveSuccess
+    databaseSuccess = saveSuccess
   }
 
   func save(_ visitor: VisitorModel, onCompletion: (Result<Bool, Error>) -> ()) {
@@ -31,5 +31,4 @@ class MockVisitorRepository: VisitorRepository {
       onCompletion(.failure(VisitRecordError(message: "Visitor Database Error")))
     }
   }
-  
 }

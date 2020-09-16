@@ -79,7 +79,7 @@ extension VisitHistoryViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let visitModel = dataSource[indexPath.row]
     let nextVC = VisitDetailViewController.load(with: visitModel)
-    self.present(nextVC, animated: true, completion: nil)
+    present(nextVC, animated: true, completion: nil)
   }
   
 }

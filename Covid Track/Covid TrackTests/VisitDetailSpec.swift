@@ -13,7 +13,6 @@ import Nimble
 @testable import Covid_Track
 
 class VisitDetailSpec: QuickSpec {
-  
   override func spec() {
     describe("Visit Detail") {
       var visitModel: VisitModel!
@@ -46,8 +45,6 @@ class VisitDetailSpec: QuickSpec {
           expect(visitViewModel.getTimeDescription(date: dateToCheck)).to(equal("10:00 1970/01/01 "),description: visitViewModel.getTimeDescription(date: dateToCheck))
         }
       }
-      
     }
   }
-
 }

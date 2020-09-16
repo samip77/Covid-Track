@@ -80,13 +80,13 @@ class VisitDetailViewController: UIViewController {
     if let image = viewModel.profile {
       profileImage.image = image
     }else {
-      profileImage.image = viewModel.profile ?? UIImage(systemName: "person.circle")
+      profileImage.image =  UIImage(systemName: "person.circle")
     }
   }
   
   //MARK:- Actions
   @IBAction func backButtonAction(_ sender: UIButton) {
-    self.dismiss(animated: true)
+    dismiss(animated: true)
   }
 }
 

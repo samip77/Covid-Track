@@ -13,7 +13,6 @@ import Nimble
 @testable import Covid_Track
 
 class VisitHistorySpec: QuickSpec {
-  
   override func spec() {
     describe("Visit History") {
       var visitHistoryViewModel: VisitHistoryViewModel!
@@ -58,7 +57,6 @@ class VisitHistorySpec: QuickSpec {
       }
     }
   }
-  
 }
 
 

@@ -9,7 +9,6 @@
 import UIKit
 
 class VisitHistoryTableViewCell: UITableViewCell, NibLoadableView {
-
   @IBOutlet weak var profileImageView: UIImageView!
   @IBOutlet weak var nameLabel: UILabel!
   @IBOutlet weak var temperatureLabel: UILabel!
@@ -40,5 +39,4 @@ class VisitHistoryTableViewCell: UITableViewCell, NibLoadableView {
     checkInLabel.text = viewModel.checkInTime
     checkOutLabel.text = viewModel.checkOutTime
   }
-    
 }

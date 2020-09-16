@@ -13,10 +13,7 @@ import Nimble
 @testable import Covid_Track
 
 class VisitRecordSpec: QuickSpec {
-  
-  
   override func spec() {
-    
     describe("VistRecordViewModel") {
       context("On CheckIn") {
         let visitorRepository = MockVisitorRepository()
@@ -101,7 +98,6 @@ class VisitRecordSpec: QuickSpec {
               expect(error).notTo(beNil(), description: "should have Error")
             }
           }
-          
         }
       }
     }
@@ -125,6 +121,5 @@ class VisitRecordSpec: QuickSpec {
         }
       }
     }
-    
   }
 }
