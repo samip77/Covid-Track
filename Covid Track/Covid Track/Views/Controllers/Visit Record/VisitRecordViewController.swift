@@ -150,9 +150,9 @@ class VisitRecordViewController: UIViewController  {
   }
   
   private func hideMoreInfo(_ infoHidden: Bool) {
-    self.homeTextField.isHidden = infoHidden
-    self.workTextField.isHidden = infoHidden
-    self.setupMoreInfoButtonImage(for: infoHidden);
+    homeTextField.isHidden = infoHidden
+    workTextField.isHidden = infoHidden
+    setupMoreInfoButtonImage(for: infoHidden);
   }
   
   private func setupMoreInfoButtonImage(for infoHidden: Bool) {

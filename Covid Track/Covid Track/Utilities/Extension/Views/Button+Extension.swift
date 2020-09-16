@@ -9,12 +9,12 @@
 import UIKit
 
 
-extension UIButton{
-  func roundedFilled(by cornerRadius:CGFloat, with backgroundColor:UIColor, and tintColor:UIColor){
-    self.layer.cornerRadius = cornerRadius
-    self.layer.masksToBounds = true
+extension UIButton {
+  func roundedFilled(by cornerRadius:CGFloat, with backgroundColor:UIColor, and tintColor:UIColor) {
+    layer.cornerRadius = cornerRadius
+    layer.masksToBounds = true
+    
     self.backgroundColor = backgroundColor
     self.tintColor = tintColor
   }
-  
 }

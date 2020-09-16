@@ -6,7 +6,6 @@
 //  Copyright © 2020 Samip shah. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 protocol ReusableView {

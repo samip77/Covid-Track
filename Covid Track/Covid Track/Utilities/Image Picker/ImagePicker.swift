@@ -8,29 +8,26 @@
 
 import UIKit
 
-import UIKit
-
 public protocol ImagePickerDelegate: class {
-  func didSelect(image: UIImage?, imageUrl:URL?)
+  func didSelect(image: UIImage?, imageUrl: URL?)
 }
 
 open class ImagePicker: NSObject {
-  
   private let pickerController: UIImagePickerController
   private weak var presentationController: UIViewController?
   private weak var delegate: ImagePickerDelegate?
   
   public init(presentationController: UIViewController, delegate: ImagePickerDelegate) {
-    self.pickerController = UIImagePickerController()
+    pickerController = UIImagePickerController()
     
     super.init()
     
     self.presentationController = presentationController
     self.delegate = delegate
     
-    self.pickerController.delegate = self
-    self.pickerController.allowsEditing = true
-    self.pickerController.mediaTypes = ["public.image"]
+    pickerController.delegate = self
+    pickerController.allowsEditing = true
+    pickerController.mediaTypes = ["public.image"]
   }
   
   private func action(for type: UIImagePickerController.SourceType, title: String) -> UIAlertAction? {
@@ -45,7 +42,6 @@ open class ImagePicker: NSObject {
   }
   
   public func present(from sourceView: UIView) {
-    
     let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
     
     if let action = self.action(for: .camera, title: "Take photo") {
@@ -66,32 +62,29 @@ open class ImagePicker: NSObject {
       alertController.popoverPresentationController?.permittedArrowDirections = [.down, .up]
     }
     
-    self.presentationController?.present(alertController, animated: true)
+    presentationController?.present(alertController, animated: true)
   }
   
   private func pickerController(_ controller: UIImagePickerController, didSelect image: UIImage?, with imageUrl: URL?) {
     controller.dismiss(animated: true, completion: nil)
-    self.delegate?.didSelect(image: image, imageUrl: imageUrl)
+    delegate?.didSelect(image: image, imageUrl: imageUrl)
   }
 }
 
 extension ImagePicker: UIImagePickerControllerDelegate {
-  
   public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-    self.pickerController(picker, didSelect: nil, with: nil)
+    pickerController(picker, didSelect: nil, with: nil)
   }
   
   public func imagePickerController(_ picker: UIImagePickerController,
                                     didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
     guard let image = info[.editedImage] as? UIImage, let url = info[.imageURL] as? URL else {
-      return self.pickerController(picker, didSelect: nil, with: nil)
+      return pickerController(picker, didSelect: nil, with: nil)
     }
    
-    self.pickerController(picker, didSelect: image, with: url)
+    pickerController(picker, didSelect: image, with: url)
   }
 }
 
-extension ImagePicker: UINavigationControllerDelegate {
-  
-}
+extension ImagePicker: UINavigationControllerDelegate { }
 

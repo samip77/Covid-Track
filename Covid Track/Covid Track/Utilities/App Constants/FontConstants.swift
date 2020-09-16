@@ -6,8 +6,8 @@
 //  Copyright © 2020 Samip shah. All rights reserved.
 //
 
-import Foundation
 import UIKit
+
 
 extension AppConstants{
   struct Font {
@@ -20,6 +20,7 @@ extension AppConstants{
     static var button = UIFont.systemFont(ofSize: 18, weight: .medium)
     
     static var cellTitle = UIFont.systemFont(ofSize: 18, weight: .bold)
+    
     static var cellSubtitle =  UIFont.systemFont(ofSize: 14, weight: .light)
   }
 }

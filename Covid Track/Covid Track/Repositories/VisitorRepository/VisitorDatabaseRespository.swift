@@ -10,15 +10,14 @@ import Foundation
 import RealmSwift
 
 class VisitoryDBRepository: VisitorRepository {
-  
   let realm = try! Realm()
   
   func save(_ visitor: VisitorModel, onCompletion: (Result<Bool, Error>) -> ()) {
     do{
-      try realm.write{
+      try realm.write {
         realm.add(visitor, update: .modified)
       }
-    }catch(let error){
+    }catch(let error) {
       onCompletion(.failure(error))
     }
     onCompletion(.success(true))

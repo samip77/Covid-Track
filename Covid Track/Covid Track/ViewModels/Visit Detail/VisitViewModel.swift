@@ -41,16 +41,14 @@ class VisitViewModel {
   var temperatureLevel: String {
     print(visitModel.temperatureLevel)
     let tempLevel = TemperatureLevel(rawValue:  visitModel.temperatureLevel )
+    
     switch tempLevel {
     case .normal:
       return "Normal"
-      
     case .high:
       return "High"
-      
     case .danger:
       return "Danger"
-      
     default:
       return "NA"
     }

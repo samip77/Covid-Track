@@ -15,7 +15,7 @@ extension String {
     return emailPred.evaluate(with: self)
   }
   
-   var isValidPhone: Bool{
+   var isValidPhone: Bool {
     let PHONE_REGEX = "^\\({0,1}((0|\\+61)(2|4|3|7|8)){0,1}\\){0,1}(\\ |-){0,1}[0-9]{2}(\\ |-){0,1}[0-9]{2}(\\ |-){0,1}[0-9]{1}(\\ |-){0,1}[0-9]{3}$"
     let phonePred = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
     return phonePred.evaluate(with: self)
